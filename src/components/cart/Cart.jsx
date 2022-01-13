@@ -51,7 +51,7 @@ const Cart = () => {
           <div className="cart__buy-items_container">
             <div>
               <p>Price ({shoppingList.length} items)</p>
-              <span>$222</span>
+              <span>{totalPrice.toFixed(2)}</span>
             </div>
             <div>
               <p>Discount</p>
