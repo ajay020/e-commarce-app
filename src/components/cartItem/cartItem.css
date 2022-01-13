@@ -1,0 +1,26 @@
+.cart-item {
+  /* background-color: greenyellow; */
+  border: 1px solid lightgray;
+  display: flex;
+  padding: 0.5rem 1rem;
+  line-height: 24px;
+}
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  margin-right: 1rem;
+  /* flex: 1 2; */
+}
+.cart-item_desc {
+  flex: 1 1;
+  /* background-color: lightgray; */
+  padding: 0.5rem 1rem;
+}
+.cart-item_desc button {
+  background-color: orange;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-top: 1rem;
+}

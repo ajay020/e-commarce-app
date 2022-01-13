@@ -1,12 +1,23 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../../redux/cart/cartActions";
 import "./productDetail.css";
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const { title, image, price, description, category, rating } = useSelector(
-    (state) => state.products.find((p) => p.id == productId)
+    (state) => state.product.products.find((p) => p.id == productId)
   );
+  const dispatch = useDispatch();
+  const addItemToCart = () => {
+    const item = {
+      id: productId,
+      title,
+      image,
+      price,
+    };
+    dispatch(addToCart(item));
+  };
 
   return (
     <div className="product-details">
@@ -14,7 +25,7 @@ const ProductDetail = () => {
         <img src={image} alt="picture" />
       </div>
       <div className="product-details_product-info">
-        <button>Add to Cart</button>
+        <button onClick={addItemToCart}>Add to Cart</button>
 
         <h6>{category}</h6>
         <p>

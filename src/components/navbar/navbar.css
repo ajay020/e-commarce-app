@@ -67,6 +67,23 @@
   margin: 1rem 0;
 }
 
+.navbar__sign-cart {
+  position: relative;
+  /* background-color: greenyellow; */
+}
+
+.navbar__sign-cart span {
+  background-color: red;
+  /* padding: 2px; */
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: -12px;
+}
+
 @media (max-width: 750px) {
   .navbar__navbar-links_container {
     display: none;

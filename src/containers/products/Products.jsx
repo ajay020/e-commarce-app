@@ -7,7 +7,7 @@ import "./products.css";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products);
+  const products = useSelector((state) => state.product.products);
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);

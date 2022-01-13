@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RiMenu3Line, RiCloseLine, RiShoppingCartLine } from "react-icons/ri";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
@@ -21,7 +22,9 @@ const Menu = () => {
 
 const Navabr = () => {
   const [toggle, setToggle] = useState(false);
-
+  const cartItemsCount = useSelector(
+    (state) => state.cart.shoppingItems.length
+  );
   return (
     <nav className="navbar gradient__bg">
       <div className="navbar__navbar-links">
@@ -35,8 +38,11 @@ const Navabr = () => {
         </div>
       </div>
       <div className="navbar__sign">
-        <p>
-          <RiShoppingCartLine color="white" />
+        <p className="navbar__sign-cart">
+          <Link to={"/viewcart"}>
+            <span>{cartItemsCount}</span>
+            <RiShoppingCartLine color="white" />
+          </Link>
         </p>
         <p>Login</p>
         <button>Sign Up</button>
