@@ -1,3 +1,34 @@
+#login-model {
+  display: none;
+}
+.login-model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+}
+.login-model_content {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  animation-name: animatetop;
+  animation-duration: 2s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,6 +65,14 @@
   display: flex;
   align-items: center;
 }
+
+.navbar__sign_login-btn {
+  cursor: pointer;
+}
+.navbar__sign_signup-btn {
+  cursor: pointer;
+}
+
 .navbar__sign button,
 .navbar__menu-container__links-sign button {
   background-color: orange;

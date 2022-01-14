@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
+import { useState } from "react";
 import CartItem from "../cartItem/Cartitem";
 import "./cart.css";
-import { useState } from "react";
 
 const Cart = () => {
   const [popup, setPopup] = useState(false);
