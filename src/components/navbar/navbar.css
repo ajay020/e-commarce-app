@@ -1,21 +1,26 @@
 #login-model {
-  display: none;
+  display: block;
 }
-.login-model {
-  position: fixed;
+#register-model {
+  display: block;
+}
+.model {
+  display: none;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100vw;
   height: 100vh;
   padding-top: 100px;
+  z-index: 12;
 }
-.login-model_content {
+.model_content {
   position: relative;
   width: 50%;
   margin: 0 auto;
   animation-name: animatetop;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes animatetop {
@@ -27,6 +32,11 @@
     top: 0px;
     opacity: 1;
   }
+}
+
+.nav-container {
+  background-color: brown;
+  z-index: 999;
 }
 
 .navbar {

@@ -2,7 +2,8 @@ import { useState } from "react";
 import { RiMenu3Line, RiCloseLine, RiShoppingCartLine } from "react-icons/ri";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import LoginModel from "../loginModel/LoginModel";
+// import LoginModel from "../loginModel/LoginModel";
+import { RegisterModel, LoginModel } from "../../components";
 import "./navbar.css";
 
 const Menu = () => {
@@ -24,20 +25,32 @@ const Menu = () => {
 const Navabr = () => {
   const [toggle, setToggle] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
+  const [showRegisterForm, setShowRegisterForm] = useState(false);
 
   const handleLoginDisplay = () => {
     setShowLoginForm(!showLoginForm);
     setToggle(false);
   };
 
+  const handleRegisterDisplay = () => {
+    setShowRegisterForm(!showRegisterForm);
+    setToggle(false);
+  };
+
   const cartItemsCount = useSelector(
     (state) => state.cart.shoppingItems.length
   );
+
   return (
-    <div>
-      <div id={showLoginForm && "login-model"} className="login-model">
-        <div className="login-model_content">
+    <div className="nav-container">
+      <div id={showLoginForm ? "login-model" : ""} className="model">
+        <div className="model_content">
           <LoginModel handleDisplay={handleLoginDisplay} />
+        </div>
+      </div>
+      <div id={showRegisterForm ? "register-model" : ""} className="model">
+        <div className="model_content">
+          <RegisterModel handleDisplay={handleRegisterDisplay} />
         </div>
       </div>
       <nav className="navbar gradient__bg">
@@ -61,7 +74,12 @@ const Navabr = () => {
           <p className="navbar__sign_login-btn" onClick={handleLoginDisplay}>
             Login
           </p>
-          <button className="navbar__sign_signup-btn">Sign Up</button>
+          <button
+            className="navbar__sign_signup-btn"
+            onClick={handleRegisterDisplay}
+          >
+            Sign Up
+          </button>
         </div>
         <div className="navbar__menu">
           <div className="navbar__menu-icons">
@@ -77,7 +95,7 @@ const Navabr = () => {
                 <Menu />
                 <div className="navbar__menu-container__links-sign">
                   <p onClick={handleLoginDisplay}>Login</p>
-                  <button>Sign Up</button>
+                  <button onClick={handleRegisterDisplay}>Sign Up</button>
                 </div>
               </div>
             </div>

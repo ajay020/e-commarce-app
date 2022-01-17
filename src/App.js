@@ -10,7 +10,6 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route exact path="/viewcart" element={<Cart/>} />
-                <Route exact path="/login" element={<LoginModel/>} />
 
                 <Route exact path="/product-detail/:productId" element={< ProductDetail/>}/>
             </Routes>
