@@ -29,6 +29,7 @@
   line-height: 20px;
   /* flex: 1; */
   justify-self: flex-end;
-  background-color: lightgray;
+  background-color: darkblue;
+  color: white;
   padding: 0.5rem 1rem;
 }

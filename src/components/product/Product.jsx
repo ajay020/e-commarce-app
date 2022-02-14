@@ -13,6 +13,7 @@ const Product = ({ product }) => {
         <div className="product__desc">
           <h6>{title}</h6>
           <p>Price: ${price}</p>
+          <p>Available: yes</p>
         </div>
       </Link>
     </div>

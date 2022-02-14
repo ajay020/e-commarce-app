@@ -18,6 +18,7 @@ const Menu = () => {
       <p>
         <a href="#about">About</a>
       </p>
+      <input className="searchInput" type="text" placeholder="Search..." />
     </>
   );
 };
