@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/e-commarce-app%20/static/css/main.71818fbc.css",
+    "main.js": "/e-commarce-app%20/static/js/main.e8143548.js",
+    "static/js/787.3661e4d2.chunk.js": "/e-commarce-app%20/static/js/787.3661e4d2.chunk.js",
+    "index.html": "/e-commarce-app%20/index.html",
+    "main.71818fbc.css.map": "/e-commarce-app%20/static/css/main.71818fbc.css.map",
+    "main.e8143548.js.map": "/e-commarce-app%20/static/js/main.e8143548.js.map",
+    "787.3661e4d2.chunk.js.map": "/e-commarce-app%20/static/js/787.3661e4d2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71818fbc.css",
+    "static/js/main.e8143548.js"
+  ]
+}
