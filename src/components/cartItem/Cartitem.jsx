@@ -11,7 +11,7 @@ const CartItem = ({ item: { id, image, title, price } }) => {
 
   return (
     <div className="cart-item">
-      <img src={image} alt="picture" />
+      <img src={image} />
       <div className="cart-item_desc">
         <p>{title}</p>
         <p>Price: {price}</p>

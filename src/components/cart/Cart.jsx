@@ -43,7 +43,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <OrderPlacedPopup />
-      {shoppingList.length == 0 && emptyCartMsg}
+      {shoppingList.length === 0 && emptyCartMsg}
       <div className="cart__item-list">{cartItems}</div>
       {shoppingList.length !== 0 && (
         <div className="cart__buy-items">

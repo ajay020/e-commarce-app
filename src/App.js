@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Cart, LoginModel, ProductDetail } from "./components";
+import { Cart, ProductDetail } from "./components";
 
 import {Home, Layout} from "./containers";
 import About from "./pages/About";
