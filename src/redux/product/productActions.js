@@ -1,5 +1,5 @@
 
-import { FETCH_PRODUCTS_LOADING, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR } from './productActionType';
+import { FETCH_PRODUCTS_LOADING, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR, SET_PRODUCT_QUERY } from './productActionType';
 import axios  from 'axios';
 
 export const productLoading =() =>{
@@ -19,6 +19,13 @@ export const productError = (error) =>{
     return {
         type: FETCH_PRODUCTS_ERROR,
         payload: error 
+    }
+}
+
+export const setProductSearchQuery  = (query)=>{
+    return {
+        type: SET_PRODUCT_QUERY,
+        payload: query 
     }
 }
 

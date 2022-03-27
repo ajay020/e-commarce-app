@@ -1,9 +1,10 @@
 
-import { FETCH_PRODUCTS_LOADING, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR } from './productActionType';
+import { FETCH_PRODUCTS_LOADING, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR, SET_PRODUCT_QUERY } from './productActionType';
 const initialState = {
     loading: false,
     products: [],
-    error:""
+    error:"",
+    searchQuery:''
 }
 
 export const productReducer = (state=initialState, action)=>{
@@ -21,6 +22,10 @@ export const productReducer = (state=initialState, action)=>{
             ...state, 
             loading:false,
             error: action.payload
+        }
+        case SET_PRODUCT_QUERY: return {
+            ...state, 
+            searchQuery: action.payload 
         }
         default: return state;
     }

@@ -4,24 +4,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // import LoginModel from "../loginModel/LoginModel";
 import { RegisterModel, LoginModel } from "../../components";
+import NavItems from "../navItems/NavItems";
 import "./navbar.css";
-
-const Menu = () => {
-  return (
-    <>
-      <p>
-        <a href="/">Home</a>
-      </p>
-      <p>
-        <a href="/contact">Contact</a>
-      </p>
-      <p>
-        <a href="/about">About</a>
-      </p>
-      <input className="searchInput" type="text" placeholder="Search..." />
-    </>
-  );
-};
 
 const Navabr = () => {
   const [toggle, setToggle] = useState(false);
@@ -58,11 +42,11 @@ const Navabr = () => {
         <div className="navbar__navbar-links">
           <div className="navbar__navbar-links_logo">
             <p className="logo">
-              <Link to={"/"}>Flipcart</Link>
+              <Link to={"/"}>Mycart</Link>
             </p>
           </div>
           <div className="navbar__navbar-links_container">
-            <Menu />
+            <NavItems />
           </div>
         </div>
         <div className="navbar__sign">
@@ -93,7 +77,7 @@ const Navabr = () => {
           {toggle && (
             <div className="navbar__menu-container scale-up-center">
               <div className="navabr__menu-container__links">
-                <Menu />
+                <NavItems />
                 <div className="navbar__menu-container__links-sign">
                   <p onClick={handleLoginDisplay}>Login</p>
                   <button onClick={handleRegisterDisplay}>Sign Up</button>

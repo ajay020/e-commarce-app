@@ -7,10 +7,22 @@ import "./products.css";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.product.products);
+  let products = useSelector((state) => state.product.products);
+  const searchQuery = useSelector((state) => state.product.searchQuery);
+
   useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
+
+  let productlist = products;
+
+  if (searchQuery) {
+    console.log(searchQuery);
+    productlist = products.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery)
+    );
+    console.log(productlist);
+  }
 
   if (products.length === 0) {
     return <h3 style={{ margin: "8rem" }}>Loading...</h3>;
@@ -18,7 +30,7 @@ const Products = () => {
 
   return (
     <div className="product_container">
-      {products.map((product) => (
+      {productlist.map((product) => (
         <Product key={product.id} product={product} />
       ))}
     </div>

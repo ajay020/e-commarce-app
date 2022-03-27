@@ -120,11 +120,7 @@
 .navbar__menu-container p {
   margin: 1rem 0;
 }
-.searchInput {
-  padding: 10px 12px;
-  border: none;
-  width: 280px;
-}
+
 .navbar__sign-cart {
   position: relative;
   /* background-color: greenyellow; */
