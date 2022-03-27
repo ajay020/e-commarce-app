@@ -12,6 +12,10 @@ const Products = () => {
     dispatch(fetchProducts());
   }, []);
 
+  if (products.length === 0) {
+    return <h3 style={{ margin: "8rem" }}>Loading...</h3>;
+  }
+
   return (
     <div className="product_container">
       {products.map((product) => (

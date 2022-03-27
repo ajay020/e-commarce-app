@@ -10,13 +10,13 @@ const Menu = () => {
   return (
     <>
       <p>
-        <a href="#home">Home</a>
+        <a href="/">Home</a>
       </p>
       <p>
-        <a href="#contact">Contact</a>
+        <a href="/contact">Contact</a>
       </p>
       <p>
-        <a href="#about">About</a>
+        <a href="/about">About</a>
       </p>
       <input className="searchInput" type="text" placeholder="Search..." />
     </>
