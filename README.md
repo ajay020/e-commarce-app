@@ -1,4 +1,4 @@
-![Alt text(img/ecommarce.gif)
+![Alt text](img/ecommarce.gif)
 
 # Getting Started with Create React App
 
