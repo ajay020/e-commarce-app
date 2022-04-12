@@ -5,9 +5,11 @@ import "./productDetail.css";
 
 const ProductDetail = () => {
   const { productId } = useParams();
+
   const { title, image, price, description, category, rating } = useSelector(
-    (state) => state.product.products.find((p) => p.id === productId)
+    (state) => state.product.products.find((p) => p.id === +productId)
   );
+
   const dispatch = useDispatch();
   const addItemToCart = () => {
     const item = {

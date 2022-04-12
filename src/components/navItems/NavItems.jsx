@@ -9,7 +9,7 @@ const NavItems = () => {
   const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
 
-  console.log("Navitems");
+  //   console.log("Navitems");
   const onChangeHandler = (e) => {
     setSearchText(e.target.value);
   };
